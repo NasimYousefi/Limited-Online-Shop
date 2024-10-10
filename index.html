@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shop</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- Enter user form -->
+  <div class="user-name-container" id="user-name-container">
+    <form id="user-name-form" class="user-name-form">
+      <h4>Enter Your Name</h4>
+      <input type="text" id="user-name-input" class="form-control" placeholder="Your Name" required>
+      <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+  </div>
+<!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="d-flex align-items-center">
+        <img id="user-avatar" src="" alt="User Avatar" width="30" height="30" class="me-2">
+        <span id="greeting" class="username">Hi, </span>
+      </div>
+      <div>
+        <img src="./img/logo.jpeg" alt="Logo" width="200" height="80">
+      </div>
+      <div class="cart-container d-flex align-items-center">
+        <p class="cart-label me-1">Cart</p>
+        <span class="cart-count" id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+
+   <!-- Search and Filter -->
+   <div class="container mt-4">
+    <div class="row justify-content-center mb-3 align-items-center">
+      <div class="col-md-4">
+        <input type="text" id="search-input" class="form-control" placeholder="Search products...">
+      </div>
+      <div class="col-md-3">
+        <select id="category-select" class="form-select">
+          <option value="">All Categories</option>
+          <!-- Categories will be added here dynamically -->
+        </select>
+      </div>
+    </div>
+
+    <!-- Product List -->
+    <div  id="product-list">
+      <!-- Products will be displayed here -->
+    </div> 
+  </div>
+
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div id="cart-total"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
